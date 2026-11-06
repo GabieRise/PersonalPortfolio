@@ -651,6 +651,7 @@ footer {
 ========================= */
 
 .profile-photo {
+    display: block;
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -658,6 +659,7 @@ footer {
     object-position: center;
     border: 4px solid #a77aff;
     margin-bottom: 20px;
+    flex-shrink: 0;
 }
 
 /* =========================
