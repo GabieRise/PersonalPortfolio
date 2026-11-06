@@ -769,3 +769,216 @@ footer {
     }
 
 }
+
+/* =========================
+   17. PROJECT CARD DESIGN
+========================= */
+
+.projects h2 {
+    margin-bottom: 10px;
+}
+
+.projects .section-description {
+    margin-bottom: 35px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Main project card */
+
+.project-card {
+    background: #ffffff;
+    border: 1px solid #e5e7ef;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: left;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
+}
+
+/* Project preview area */
+
+.project-preview {
+    min-height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Portfolio preview */
+
+.portfolio-preview {
+    background: linear-gradient(
+        135deg,
+        #080d1d,
+        #30205e
+    );
+    padding: 20px;
+}
+
+.preview-window {
+    width: 85%;
+    height: 145px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.preview-dots {
+    display: flex;
+    gap: 5px;
+    padding: 9px;
+    background: #e9e9f2;
+}
+
+.preview-dots span {
+    width: 8px;
+    height: 8px;
+    background: #9361ff;
+    border-radius: 50%;
+}
+
+.preview-content {
+    text-align: center;
+    padding: 12px;
+}
+
+.preview-logo {
+    color: #7541f5;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.preview-content h3 {
+    color: #172033;
+    margin-top: 3px;
+}
+
+.preview-content p {
+    color: #647084;
+    font-size: 11px;
+}
+
+/* DevHub preview */
+
+.devhub-preview {
+    flex-direction: column;
+    gap: 8px;
+    color: #ffffff;
+    background: linear-gradient(
+        135deg,
+        #15213b,
+        #7541f5
+    );
+}
+
+.devhub-icon {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.devhub-preview h3 {
+    font-size: 26px;
+}
+
+.devhub-preview p {
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+/* Project information */
+
+.project-info {
+    padding: 25px;
+}
+
+.project-status {
+    display: inline-block;
+    color: #7541f5;
+    background: #eee8ff;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.project-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.project-info > p {
+    color: #647084;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+/* Technology labels */
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tech-stack span {
+    background: #f0ebff;
+    color: #7541f5;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* Project links */
+
+.project-link {
+    display: inline-block;
+    color: #7541f5;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    color: #5425cb;
+    text-decoration: underline;
+}
+
+/* Responsive project cards */
+
+@media (max-width: 768px) {
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-preview {
+        min-height: 200px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .project-info {
+        padding: 20px;
+    }
+
+    .project-info h3 {
+        font-size: 18px;
+    }
+
+}
