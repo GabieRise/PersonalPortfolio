@@ -645,3 +645,125 @@ footer {
     }
 
 }
+
+/* =========================
+   15. PROFILE IMAGE
+========================= */
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 4px solid #a77aff;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   16. ABOUT SECTION UPDATE
+========================= */
+
+.about {
+    text-align: left;
+}
+
+.about-inner {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.section-kicker {
+    color: #7541f5;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.about-content h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.2;
+    margin-bottom: 25px;
+    max-width: 550px;
+}
+
+.about-content > p:not(.section-kicker) {
+    color: #647084;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.about-content .btn {
+    margin-top: 12px;
+}
+
+/* About highlight card */
+
+.about-highlight {
+    background: linear-gradient(
+        145deg,
+        #080d1d,
+        #262c52
+    );
+
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(8, 13, 29, 0.15);
+}
+
+.highlight-label {
+    color: #a77aff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.about-highlight h3 {
+    font-size: 27px;
+    margin: 20px 0 12px;
+}
+
+.about-highlight > p {
+    color: #d0d3df;
+    margin-bottom: 25px;
+}
+
+.approach-list {
+    display: grid;
+    gap: 15px;
+}
+
+.approach-list div {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Responsive About section */
+
+@media (max-width: 768px) {
+
+    .about-inner {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-content h2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-highlight {
+        padding: 30px;
+    }
+
+}
