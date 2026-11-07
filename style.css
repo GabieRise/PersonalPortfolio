@@ -1170,3 +1170,62 @@ footer {
 section[id] {
     scroll-margin-top: 90px;
 }
+
+
+/* =========================
+   21. PROJECT FILTERS
+========================== */
+
+.project-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.project-filter {
+    background-color: #ffffff;
+    color: #172033;
+    border: 1px solid #ded7f5;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.project-filter:hover,
+.project-filter.active {
+    background-color: #7541f5;
+    color: #ffffff;
+    border-color: #7541f5;
+}
+
+.project-filter:focus-visible {
+    outline: 3px solid #a77aff;
+    outline-offset: 3px;
+}
+
+/* Hide filtered project cards */
+
+.project-card[hidden] {
+    display: none;
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 480px) {
+
+    .project-filters {
+        gap: 8px;
+    }
+
+    .project-filter {
+        padding: 9px 13px;
+        font-size: 12px;
+    }
+
+}
