@@ -157,3 +157,60 @@ if (themeToggle && themeIcon) {
     });
 
 }
+
+/* =========================
+   3. PROJECT FILTERS
+========================= */
+
+// Select all filter buttons
+const filterButtons = document.querySelectorAll(".project-filter");
+
+// Select all project cards
+const projectCards = document.querySelectorAll(".project-card");
+
+// Check that the elements exist
+if (filterButtons.length > 0 && projectCards.length > 0) {
+
+    // Add a click event to each filter button
+    filterButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            // Get the selected filter category
+            const selectedFilter = button.dataset.filter;
+
+            // Loop through every project card
+            projectCards.forEach(card => {
+
+                // Get the card's category
+                const cardCategory = card.dataset.category;
+
+                // Check whether the card should be displayed
+                const shouldShow =
+                    selectedFilter === "all" ||
+                    selectedFilter === cardCategory;
+
+                // Show or hide the card
+                card.hidden = !shouldShow;
+
+            });
+
+            // Update the active button
+            filterButtons.forEach(filterButton => {
+
+                const isActive = filterButton === button;
+
+                filterButton.classList.toggle("active", isActive);
+
+                filterButton.setAttribute(
+                    "aria-pressed",
+                    String(isActive)
+                );
+
+            });
+
+        });
+
+    });
+
+}
