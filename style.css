@@ -1491,3 +1491,133 @@ body,
                 color 0.3s ease,
                 border-color 0.3s ease;
 }
+
+/* =========================
+   26. CONTACT FORM
+========================= */
+
+.contact-form-card {
+    max-width: 850px;
+    margin: 55px auto 0;
+    padding: 40px;
+    background-color: #ffffff;
+    color: #172033;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.contact-form-heading {
+    margin-bottom: 25px;
+}
+
+.contact-form-heading h3 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.contact-form-heading p {
+    color: #647084;
+    font-size: 14px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #dce0e9;
+    border-radius: 8px;
+    background-color: #f8f9fc;
+    color: #172033;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #7541f5;
+    box-shadow: 0 0 0 3px rgba(117, 65, 245, 0.12);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #929bad;
+}
+
+/* Submit button */
+
+.form-submit {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+/* Form feedback */
+
+.form-status {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #5425cb;
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   27. RESPONSIVE CONTACT FORM
+========================= */
+
+@media (max-width: 768px) {
+
+    .contact-form-card {
+        padding: 30px 22px;
+        margin-top: 40px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .contact-form-card {
+        padding: 25px 17px;
+    }
+
+    .contact-form-heading h3 {
+        font-size: 22px;
+    }
+
+    .form-submit {
+        width: 100%;
+    }
+
+}

@@ -214,3 +214,116 @@ if (filterButtons.length > 0 && projectCards.length > 0) {
     });
 
 }
+
+/* =========================
+   4. CONTACT FORM VALIDATION
+========================= */
+
+// Select the contact form
+const contactForm = document.querySelector("#contact-form");
+
+if (contactForm) {
+
+    // Select form fields
+    const nameInput = document.querySelector("#contact-name");
+    const emailInput = document.querySelector("#contact-email");
+    const subjectInput = document.querySelector("#contact-subject");
+    const messageInput = document.querySelector("#contact-message");
+
+    // Select feedback message
+    const formStatus = document.querySelector("#form-status");
+
+
+    // Listen for form submission
+
+    contactForm.addEventListener("submit", (event) => {
+
+        // Prevent normal form submission
+        event.preventDefault();
+
+
+        // Check HTML form validation
+        if (!contactForm.checkValidity()) {
+
+            contactForm.reportValidity();
+
+            return;
+
+        }
+
+
+        // Retrieve and clean input values
+
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const subject = subjectInput.value.trim();
+        const message = messageInput.value.trim();
+
+
+        // Check for empty or whitespace-only fields
+
+        if (!name || !email || !subject || !message) {
+
+            formStatus.textContent =
+                "Please complete all fields before submitting.";
+
+            return;
+
+        }
+
+
+        // Prepare the email subject and message
+
+        const emailSubject = encodeURIComponent(subject);
+
+        const emailBody = encodeURIComponent(
+            `Hello Gabriel,
+
+${message}
+
+Name: ${name}
+Email: ${email}`
+        );
+
+
+        // Create the email link
+
+        const mailtoLink =
+            `mailto:oisamojegabriel@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+
+
+        // Display feedback
+
+        formStatus.textContent =
+            "Your email application should open with your message. Please review and send it there.";
+
+
+        // Open the visitor's email application
+
+        // Prepare Gmail compose URL
+const gmailComposeUrl = new URL(
+    "https://mail.google.com/mail/"
+);
+
+gmailComposeUrl.search = new URLSearchParams({
+    view: "cm",
+    fs: "1",
+    to: "oisamojegabriel@gmail.com",
+    su: subject,
+    body: `Hello Gabriel,
+
+${message}
+
+Name: ${name}
+Email: ${email}`
+}).toString();
+
+// Open Gmail in a new tab
+window.open(
+    gmailComposeUrl.toString(),
+    "_blank"
+);
+
+    });
+
+}
