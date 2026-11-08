@@ -1229,3 +1229,265 @@ section[id] {
     }
 
 }
+
+/* =========================
+   22. JAVASCRIPT MOBILE MENU
+========================= */
+
+/* Hamburger button */
+
+.menu-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-button span {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    transition: transform 0.3s ease,
+                opacity 0.3s ease;
+}
+
+/* Animate hamburger into an X */
+
+.menu-button[aria-expanded="true"] span:first-child {
+    transform: translateY(9.5px) rotate(45deg);
+}
+
+.menu-button[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-button[aria-expanded="true"] span:last-child {
+    transform: translateY(-9.5px) rotate(-45deg);
+}
+
+.menu-button:focus-visible {
+    outline: 2px solid #a77aff;
+    outline-offset: 5px;
+}
+
+/* Mobile navigation */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .menu-button {
+        display: flex;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 0;
+
+        max-height: 0;
+        padding-top: 0;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+
+        transition: max-height 0.35s ease,
+                    opacity 0.25s ease,
+                    padding-top 0.35s ease,
+                    visibility 0.35s ease;
+    }
+
+    /* Show navigation when opened */
+
+    .nav-links.is-open {
+        max-height: 320px;
+        padding-top: 20px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+}
+
+/* =========================
+   23. THEME TOGGLE BUTTON
+========================= */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    order: 3;
+}
+
+.nav-links {
+    order: 2;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+
+    font-size: 18px;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: #7541f5;
+    transform: rotate(15deg);
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid #a77aff;
+    outline-offset: 4px;
+}
+
+/* Mobile navigation alignment */
+
+@media (max-width: 768px) {
+
+    .nav-actions {
+        order: 2;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        order: 3;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+}
+
+/* =========================
+   24. DARK THEME
+========================= */
+
+body.dark-theme {
+    background-color: #0d1425;
+    color: #f4f6ff;
+}
+
+/* About and projects */
+
+body.dark-theme .about,
+body.dark-theme .projects {
+    background-color: #111a2d;
+    color: #f4f6ff;
+}
+
+/* Skills section */
+
+body.dark-theme .skills {
+    background-color: #0d1425;
+}
+
+/* Section headings */
+
+body.dark-theme .about-content h2,
+body.dark-theme .skills h2,
+body.dark-theme .projects h2 {
+    color: #f4f6ff;
+}
+
+/* Paragraphs */
+
+body.dark-theme .about-content > p:not(.section-kicker),
+body.dark-theme .about > .section-inner > p,
+body.dark-theme .section-description,
+body.dark-theme .skill-card p,
+body.dark-theme .project-info > p {
+    color: #bac4d8;
+}
+
+/* Skill cards */
+
+body.dark-theme .skill-card {
+    background-color: #18233a;
+    color: #f4f6ff;
+    border: 1px solid #2d3a57;
+}
+
+body.dark-theme .skill-card h3 {
+    color: #b99aff;
+}
+
+/* Project cards */
+
+body.dark-theme .project-card {
+    background-color: #18233a;
+    border-color: #2d3a57;
+}
+
+body.dark-theme .project-card h3 {
+    color: #f4f6ff;
+}
+
+body.dark-theme .project-link {
+    color: #b99aff;
+}
+
+/* Project filter buttons */
+
+body.dark-theme .project-filter {
+    background-color: #18233a;
+    color: #f4f6ff;
+    border-color: #3b4967;
+}
+
+body.dark-theme .project-filter.active {
+    background-color: #7541f5;
+    border-color: #7541f5;
+}
+
+body.dark-theme .project-filter:hover {
+    background-color: #7541f5;
+    color: #ffffff;
+}
+
+/* =========================
+   25. THEME TRANSITIONS
+========================= */
+
+body,
+.about,
+.skills,
+.projects,
+.skill-card,
+.project-card {
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
+}

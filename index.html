@@ -8,48 +8,91 @@
 
     <meta name="description" content="Gabriel Oisamoje's personal portfolio showcasing frontend development skills and projects.">
 
+    <meta name="author" content="Gabriel Oisamoje">
+
     <title>GabieRise | Frontend Developer</title>
 
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript File -->
     <script src="script.js" defer></script>
+
 </head>
 
 <body>
 
-   
-<!-- NAVIGATION -->
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
-<header>
-    <nav class="navbar">
+    <header>
 
-        <a href="#home" class="logo">GabieRise</a>
+        <nav class="navbar">
 
-        <!-- Hamburger Button -->
-        <button
-            class="menu-button"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-            aria-controls="primary-navigation"
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+            <!-- Website Logo -->
+            <a href="#home" class="logo">GabieRise</a>
 
-        <!-- Navigation Links -->
-        <ul class="nav-links" id="primary-navigation">
+            <div class="nav-actions">
 
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+                <!-- Dark / Light Theme Toggle -->
 
-        </ul>
+                <button
+                    class="theme-toggle"
+                    type="button"
+                    aria-label="Switch to dark theme"
+                    aria-pressed="false"
+                >
+                    <span class="theme-icon" aria-hidden="true">🌙</span>
+                </button>
 
-    </nav>
-</header>
+
+                <!-- Mobile Hamburger Menu -->
+
+                <button
+                    class="menu-button"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="primary-navigation"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+
+            <!-- Navigation Links -->
+
+            <ul class="nav-links" id="primary-navigation">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
 
 
     <main>
@@ -62,19 +105,31 @@
 
             <div class="hero-inner">
 
+
+                <!-- Hero Introduction -->
+
                 <div class="hero-content">
 
-                    <p class="hero-eyebrow">Hello, I'm</p>
+                    <p class="hero-eyebrow">
+                        Hello, I'm
+                    </p>
 
-                    <h1>Gabriel Oisamoje</h1>
+                    <h1>
+                        Gabriel Oisamoje
+                    </h1>
 
-                    <h2>Frontend Developer</h2>
+                    <h2>
+                        Frontend Developer
+                    </h2>
 
                     <p class="hero-description">
                         I build responsive and user-friendly websites
                         with modern web technologies. I'm passionate
                         about creating meaningful digital experiences.
                     </p>
+
+
+                    <!-- Hero Buttons -->
 
                     <div class="hero-actions">
 
@@ -93,7 +148,7 @@
 
                 <!-- Profile Visual -->
 
-                <div class="hero-visual" aria-hidden="true">
+                <div class="hero-visual">
 
                     <div class="profile-card">
 
@@ -103,11 +158,18 @@
                             class="profile-photo"
                         >
 
-                        <h3>Gabriel Oisamoje</h3>
+                        <h3>
+                            Gabriel Oisamoje
+                        </h3>
 
-                        <p>Frontend Developer</p>
+                        <p>
+                            Frontend Developer
+                        </p>
 
                     </div>
+
+
+                    <!-- Floating Labels -->
 
                     <div class="floating-tag tag-top">
                         HTML · CSS
@@ -124,76 +186,92 @@
         </section>
 
 
-       
-<!-- ABOUT SECTION -->
+        <!-- =========================
+             ABOUT SECTION
+        ========================== -->
 
-<section id="about" class="about">
+        <section id="about" class="about">
 
-    <div class="section-inner about-inner">
-
-        <div class="about-content">
-
-            <p class="section-kicker">GET TO KNOW ME</p>
-
-            <h2>
-                Building meaningful
-                experiences through code.
-            </h2>
-
-            <p>
-                I'm Gabriel Oisamoje, an aspiring frontend
-                developer passionate about creating beautiful,
-                responsive and functional websites.
-            </p>
-
-            <p>
-                I enjoy turning creative ideas into practical
-                digital experiences. I'm currently strengthening
-                my skills in HTML, CSS, JavaScript and React
-                through continuous learning and hands-on projects.
-            </p>
-
-            <a href="#contact" class="btn">
-                Let's Connect
-            </a>
-
-        </div>
+            <div class="section-inner about-inner">
 
 
-        <div class="about-visual">
+                <!-- About Introduction -->
 
-            <div class="about-highlight">
+                <div class="about-content">
 
-                <span class="highlight-label">
-                    MY DEVELOPMENT JOURNEY
-                </span>
+                    <p class="section-kicker">
+                        GET TO KNOW ME
+                    </p>
 
-                <h3>Learn. Build. Improve.</h3>
+                    <h2>
+                        Building meaningful
+                        experiences through code.
+                    </h2>
 
-                <p>
-                    Every project is an opportunity
-                    to learn something new and become
-                    a better developer.
-                </p>
+                    <p>
+                        I'm Gabriel Oisamoje, an aspiring frontend
+                        developer passionate about creating beautiful,
+                        responsive and functional websites.
+                    </p>
 
-                <div class="approach-list">
+                    <p>
+                        I enjoy turning creative ideas into practical
+                        digital experiences. I'm currently strengthening
+                        my skills in HTML, CSS, JavaScript and React
+                        through continuous learning and hands-on projects.
+                    </p>
 
-                    <div>01 — Learn new technologies</div>
+                    <a href="#contact" class="btn">
+                        Let's Connect
+                    </a>
 
-                    <div>02 — Build practical projects</div>
+                </div>
 
-                    <div>03 — Improve through practice</div>
+
+                <!-- About Highlight Card -->
+
+                <div class="about-visual">
+
+                    <div class="about-highlight">
+
+                        <span class="highlight-label">
+                            MY DEVELOPMENT JOURNEY
+                        </span>
+
+                        <h3>
+                            Learn. Build. Improve.
+                        </h3>
+
+                        <p>
+                            Every project is an opportunity
+                            to learn something new and become
+                            a better developer.
+                        </p>
+
+
+                        <div class="approach-list">
+
+                            <div>
+                                01 — Learn new technologies
+                            </div>
+
+                            <div>
+                                02 — Build practical projects
+                            </div>
+
+                            <div>
+                                03 — Improve through practice
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </div>
-
-</section>
-
+        </section>
 
 
         <!-- =========================
@@ -204,32 +282,61 @@
 
             <div class="section-inner">
 
-                <h2>My Skills</h2>
+                <h2>
+                    My Skills
+                </h2>
 
                 <p class="section-description">
                     Technologies I'm learning and working with.
                 </p>
 
+
+                <!-- Skills Cards -->
+
                 <div class="skills-container">
 
+
                     <article class="skill-card">
+
                         <h3>HTML5</h3>
-                        <p>Website structure and semantic markup.</p>
+
+                        <p>
+                            Website structure and semantic markup.
+                        </p>
+
                     </article>
 
+
                     <article class="skill-card">
+
                         <h3>CSS3</h3>
-                        <p>Styling, layouts and responsive design.</p>
+
+                        <p>
+                            Styling, layouts and responsive design.
+                        </p>
+
                     </article>
 
+
                     <article class="skill-card">
+
                         <h3>JavaScript</h3>
-                        <p>Interactive website functionality.</p>
+
+                        <p>
+                            Interactive website functionality.
+                        </p>
+
                     </article>
 
+
                     <article class="skill-card">
+
                         <h3>React</h3>
-                        <p>Building reusable user interfaces.</p>
+
+                        <p>
+                            Building reusable user interfaces.
+                        </p>
+
                     </article>
 
                 </div>
@@ -239,275 +346,340 @@
         </section>
 
 
-    
+        <!-- =========================
+             PROJECTS SECTION
+        ========================== -->
 
-<!-- =========================
-     PROJECTS SECTION
-========================== -->
+        <section id="projects" class="projects">
 
-<section id="projects" class="projects">
+            <div class="section-inner">
 
-    <div class="section-inner">
+                <p class="section-kicker">
+                    MY WORK
+                </p>
 
-        <p class="section-kicker">MY WORK</p>
+                <h2>
+                    Some of My Projects
+                </h2>
 
-        <h2>Some of My Projects</h2>
-
-        <p class="section-description">
-            A selection of projects from my development journey.
-        </p>
-
-        <!-- Project Filter Buttons -->
-
-        <div class="project-filters" aria-label="Filter projects">
-
-            <button
-                type="button"
-                class="project-filter active"
-                data-filter="all"
-                aria-pressed="true"
-            >
-                All Projects
-            </button>
-
-            <button
-                type="button"
-                class="project-filter"
-                data-filter="html-css"
-                aria-pressed="false"
-            >
-                HTML & CSS
-            </button>
-
-            <button
-                type="button"
-                class="project-filter"
-                data-filter="learning"
-                aria-pressed="false"
-            >
-                Learning Platforms
-            </button>
-
-        </div>
+                <p class="section-description">
+                    A selection of projects from my development journey.
+                </p>
 
 
-        <!-- Project Cards -->
+                <!-- Project Filter Buttons -->
 
-        <div class="projects-container">
+                <div
+                    class="project-filters"
+                    aria-label="Filter projects"
+                >
 
-            <!-- Project One -->
+                    <button
+                        type="button"
+                        class="project-filter active"
+                        data-filter="all"
+                        aria-pressed="true"
+                    >
+                        All Projects
+                    </button>
 
-            <article
-                class="project-card"
-                data-category="html-css"
-            >
 
-                <div class="project-preview portfolio-preview">
+                    <button
+                        type="button"
+                        class="project-filter"
+                        data-filter="html-css"
+                        aria-pressed="false"
+                    >
+                        HTML & CSS
+                    </button>
 
-                    <div class="preview-window">
 
-                        <div class="preview-dots">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <div class="preview-content">
-                            <span class="preview-logo">&lt;/&gt;</span>
-                            <h3>GabieRise</h3>
-                            <p>Frontend Developer</p>
-                        </div>
-
-                    </div>
+                    <button
+                        type="button"
+                        class="project-filter"
+                        data-filter="learning"
+                        aria-pressed="false"
+                    >
+                        Learning Platforms
+                    </button>
 
                 </div>
 
-                <div class="project-info">
 
-                    <span class="project-status">
-                        In Progress
-                    </span>
+                <!-- Project Cards -->
 
-                    <h3>Personal Portfolio</h3>
+                <div class="projects-container">
 
-                    <p>
-                        A responsive developer portfolio designed
-                        to showcase my skills, projects and
-                        development journey.
+
+                    <!-- Project One -->
+
+                    <article
+                        class="project-card"
+                        data-category="html-css"
+                    >
+
+                        <!-- Project Preview -->
+
+                        <div class="project-preview portfolio-preview">
+
+                            <div class="preview-window">
+
+                                <div class="preview-dots">
+
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+
+                                </div>
+
+
+                                <div class="preview-content">
+
+                                    <span class="preview-logo">
+                                        &lt;/&gt;
+                                    </span>
+
+                                    <h3>GabieRise</h3>
+
+                                    <p>Frontend Developer</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Project Information -->
+
+                        <div class="project-info">
+
+                            <span class="project-status">
+                                In Progress
+                            </span>
+
+                            <h3>
+                                Personal Portfolio
+                            </h3>
+
+                            <p>
+                                A responsive developer portfolio designed
+                                to showcase my skills, projects and
+                                development journey.
+                            </p>
+
+
+                            <!-- Technologies -->
+
+                            <div class="tech-stack">
+
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+
+                            </div>
+
+
+                            <a
+                                href="https://github.com/GabieRise/PersonalPortfolio"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                View Source &rarr;
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Project Two -->
+
+                    <article
+                        class="project-card"
+                        data-category="learning"
+                    >
+
+                        <!-- Project Preview -->
+
+                        <div class="project-preview devhub-preview">
+
+                            <div class="devhub-icon">
+                                &lt;/&gt;
+                            </div>
+
+                            <h3>DevHub 2.0</h3>
+
+                            <p>
+                                LEARN · BUILD · GROW
+                            </p>
+
+                        </div>
+
+
+                        <!-- Project Information -->
+
+                        <div class="project-info">
+
+                            <span class="project-status">
+                                Planned Project
+                            </span>
+
+                            <h3>
+                                Learning Resource Platform
+                            </h3>
+
+                            <p>
+                                A platform concept for discovering,
+                                organising and tracking programming
+                                learning resources.
+                            </p>
+
+
+                            <!-- Technologies -->
+
+                            <div class="tech-stack">
+
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+
+                            </div>
+
+
+                            <span class="project-link">
+                                Coming Soon
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT SECTION
+        ========================== -->
+
+        <section id="contact" class="contact">
+
+            <div class="section-inner contact-inner">
+
+
+                <!-- Contact Introduction -->
+
+                <div class="contact-copy">
+
+                    <p class="section-kicker">
+                        LET'S CONNECT
                     </p>
 
-                    <div class="tech-stack">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                    </div>
+                    <h2>
+                        Let's Work Together
+                    </h2>
+
+                    <p>
+                        Have a project in mind, a question, or just want
+                        to connect? I'd love to hear from you.
+                        Feel free to reach out.
+                    </p>
+
 
                     <a
-                        href="https://github.com/GabieRise/PersonalPortfolio"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link"
+                        href="mailto:oisamojegabriel@gmail.com"
+                        class="btn"
                     >
-                        View Source &rarr;
+                        Send Me an Email &rarr;
                     </a>
 
                 </div>
 
-            </article>
+
+                <!-- Contact Details -->
+
+                <div class="contact-details">
 
 
-            <!-- Project Two -->
+                    <!-- Email -->
 
-            <article
-                class="project-card"
-                data-category="learning"
-            >
+                    <div class="contact-item">
 
-                <div class="project-preview devhub-preview">
+                        <span class="contact-icon">
+                            @
+                        </span>
 
-                    <div class="devhub-icon">&lt;/&gt;</div>
+                        <div>
 
-                    <h3>DevHub 2.0</h3>
+                            <h3>Email Me</h3>
 
-                    <p>LEARN · BUILD · GROW</p>
+                            <a href="mailto:oisamojegabriel@gmail.com">
+                                oisamojegabriel@gmail.com
+                            </a>
 
-                </div>
+                        </div>
 
-                <div class="project-info">
-
-                    <span class="project-status">
-                        Planned Project
-                    </span>
-
-                    <h3>Learning Resource Platform</h3>
-
-                    <p>
-                        A platform concept for discovering,
-                        organising and tracking programming
-                        learning resources.
-                    </p>
-
-                    <div class="tech-stack">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
                     </div>
 
-                    <span class="project-link">
-                        Coming Soon
-                    </span>
 
-                </div>
+                    <!-- Social Links -->
 
-            </article>
+                    <div class="social-links">
 
-        </div>
-
-    </div>
-
-</section>
+                        <h3>
+                            Find Me Online
+                        </h3>
 
 
+                        <a
+                            href="https://github.com/GabieRise"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visit my GitHub profile"
+                        >
+                            GitHub &nearr;
+                        </a>
 
-        
-<!-- =========================
-     CONTACT SECTION
-========================== -->
+                    </div>
 
-<section id="contact" class="contact">
-
-    <div class="section-inner contact-inner">
-
-        <!-- Contact Introduction -->
-        <div class="contact-copy">
-
-            <p class="section-kicker">LET'S CONNECT</p>
-
-            <h2>Let's Work Together</h2>
-
-            <p>
-                Have a project in mind, a question, or just want
-                to connect? I'd love to hear from you.
-                Feel free to reach out.
-            </p>
-
-            <a
-                href="mailto:oisamojegabriel@gmail.com"
-                class="btn"
-            >
-                Send Me an Email &rarr;
-            </a>
-
-        </div>
-
-
-        <!-- Contact Information -->
-        <div class="contact-details">
-
-            <div class="contact-item">
-
-                <span class="contact-icon">@</span>
-
-                <div>
-                    <h3>Email Me</h3>
-
-                    <a href="mailto:oisamojegabriel@gmail.com">
-                        oisamojegabriel@gmail.com
-                    </a>
                 </div>
 
             </div>
 
-
-            <div class="social-links">
-
-                <h3>Find Me Online</h3>
-
-                <a
-                    href="https://github.com/GabieRise"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Visit my GitHub profile"
-                >
-                    GitHub &nearr;
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
+        </section>
 
     </main>
 
 
-   
-<!-- =========================
-     FOOTER
-========================== -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
-<footer>
+    <footer>
 
-    <div class="footer-inner">
+        <div class="footer-inner">
 
-        <a href="#home" class="footer-logo">
-            GabieRise
-        </a>
+            <a href="#home" class="footer-logo">
+                GabieRise
+            </a>
 
-        <p>
-            &copy; 2026 Gabriel Oisamoje.
-            All rights reserved.
-        </p>
+            <p>
+                &copy; 2026 Gabriel Oisamoje.
+                All rights reserved.
+            </p>
 
-        <a href="#home" class="back-to-top">
-            Back to Top &uarr;
-        </a>
+            <a href="#home" class="back-to-top">
+                Back to Top &uarr;
+            </a>
 
-    </div>
+        </div>
 
-</footer>
+    </footer>
 
 
 </body>

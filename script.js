@@ -1,58 +1,159 @@
 
 /* =========================
-   1. PROJECT FILTERS
-========================== */
+   1. MOBILE NAVIGATION
+========================= */
 
-// Select all filter buttons
-const filterButtons = document.querySelectorAll(".project-filter");
+// Select the hamburger button
+const menuButton = document.querySelector(".menu-button");
 
-// Select all project cards
-const projectCards = document.querySelectorAll(".project-card");
-
-
-// Add click event to each filter button
-
-filterButtons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        // Get the selected category
-        const selectedFilter = button.dataset.filter;
+// Select the navigation menu
+const navLinks = document.querySelector("#primary-navigation");
 
 
-        // Loop through all project cards
+// Function to open or close the menu
 
-        projectCards.forEach(card => {
+function setMenuOpen(isOpen) {
 
-            // Get the category of the current card
-            const cardCategory = card.dataset.category;
+    // Add or remove the open class
+    navLinks.classList.toggle("is-open", isOpen);
 
-            // Decide whether the card should be visible
-            const shouldShow =
-                selectedFilter === "all" ||
-                selectedFilter === cardCategory;
+    // Update accessibility information
+    menuButton.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+    );
 
-            // Show or hide the card
-            card.hidden = !shouldShow;
+    menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
 
-        });
+}
 
 
-        // Update the active filter button
+// Check that both elements exist
 
-        filterButtons.forEach(filterButton => {
+if (menuButton && navLinks) {
 
-            const isActive = filterButton === button;
+    // Open or close menu when hamburger is clicked
 
-            filterButton.classList.toggle("active", isActive);
+    menuButton.addEventListener("click", () => {
 
-            filterButton.setAttribute(
-                "aria-pressed",
-                String(isActive)
-            );
+        const isOpen =
+            menuButton.getAttribute("aria-expanded") === "true";
+
+        setMenuOpen(!isOpen);
+
+    });
+
+
+    // Close menu when a navigation link is selected
+
+    navLinks.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            setMenuOpen(false);
 
         });
 
     });
 
-});
+
+    // Close menu when user clicks outside
+
+    document.addEventListener("click", event => {
+
+        if (
+            !menuButton.contains(event.target) &&
+            !navLinks.contains(event.target)
+        ) {
+
+            setMenuOpen(false);
+
+        }
+
+    });
+
+
+    // Close menu when Escape is pressed
+
+    document.addEventListener("keydown", event => {
+
+        if (event.key === "Escape") {
+
+            setMenuOpen(false);
+
+            menuButton.focus();
+
+        }
+
+    });
+
+}
+
+/* =========================
+   2. DARK AND LIGHT THEME
+========================= */
+
+// Select the theme button
+const themeToggle = document.querySelector(".theme-toggle");
+
+// Select the theme icon
+const themeIcon = document.querySelector(".theme-icon");
+
+
+// Function to apply the selected theme
+
+function applyTheme(theme) {
+
+    const isDark = theme === "dark";
+
+    // Add or remove dark-theme class
+    document.body.classList.toggle("dark-theme", isDark);
+
+    // Update button accessibility information
+    themeToggle.setAttribute(
+        "aria-pressed",
+        String(isDark)
+    );
+
+    themeToggle.setAttribute(
+        "aria-label",
+        isDark ? "Switch to light theme" : "Switch to dark theme"
+    );
+
+    // Change the icon
+    themeIcon.textContent = isDark ? "☀️" : "🌙";
+
+}
+
+
+// Check whether saved theme exists
+
+if (themeToggle && themeIcon) {
+
+    const savedTheme = localStorage.getItem("gabierise-theme");
+
+    // Apply saved preference, or use light theme
+    applyTheme(savedTheme === "dark" ? "dark" : "light");
+
+
+    // Listen for theme button clicks
+
+    themeToggle.addEventListener("click", () => {
+
+        const isDark =
+            document.body.classList.contains("dark-theme");
+
+        const newTheme = isDark ? "light" : "dark";
+
+        // Apply the new theme
+        applyTheme(newTheme);
+
+        // Remember the visitor's preference
+        localStorage.setItem("gabierise-theme", newTheme);
+
+    });
+
+}
