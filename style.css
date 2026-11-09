@@ -1621,3 +1621,83 @@ body,
     }
 
 }
+
+/* =========================
+   28. FORMSPREE FEEDBACK
+========================= */
+
+/* Hide feedback until Formspree activates it */
+
+.form-status,
+.field-error {
+    display: none;
+}
+
+/* General success and error messages */
+
+.form-status[data-fs-active] {
+    display: block;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Success message */
+
+.form-success[data-fs-active] {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #86efac;
+}
+
+/* General error message */
+
+.form-error[data-fs-active] {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+/* Individual field errors */
+
+.field-error[data-fs-active] {
+    display: block;
+    color: #dc2626;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Highlight invalid fields */
+
+.form-group input[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+    border-color: #dc2626;
+}
+
+/* Disabled submit button */
+
+.form-submit:disabled {
+    opacity: 0.6;
+    cursor: wait;
+    transform: none;
+}
+
+/* Dark theme feedback adjustments */
+
+body.dark-theme .contact-form-card {
+    background-color: #18233a;
+    color: #f4f6ff;
+}
+
+body.dark-theme .contact-form-heading p {
+    color: #bac4d8;
+}
+
+body.dark-theme .form-group input,
+body.dark-theme .form-group textarea {
+    background-color: #0d1425;
+    color: #ffffff;
+    border-color: #3b4967;
+}
