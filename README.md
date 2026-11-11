@@ -110,3 +110,32 @@ My goals include:
 **Built with ❤️ by Gabriel Oisamoje**
 
 *Learn. Build. Improve.*
+
+
+## 🖥️ Website Preview
+
+Here is a preview of the GabieRise personal portfolio.
+
+
+## 🖥️ Website Previews
+
+### Desktop View
+
+![GabieRise Desktop Preview](screenshots/desktop.png)
+
+### Mobile View
+
+![GabieRise Mobile Preview](screenshots/mobile.png)
+
+### Projects Section
+
+![GabieRise Projects](screenshots/projects.png)
+
+### Dark Mode
+
+![GabieRise Dark Mode](screenshots/dark-mode.png)
+
+
+## 🚀 Live Website
+
+Visit: https://gabierise.github.io/PersonalPortfolio/
