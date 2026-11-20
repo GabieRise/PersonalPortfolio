@@ -1701,3 +1701,47 @@ body.dark-theme .form-group textarea {
     color: #ffffff;
     border-color: #3b4967;
 }
+
+
+/* =========================
+   29. PROJECT SCREENSHOT PREVIEWS
+========================= */
+
+/* Keep screenshot previews at a consistent size and prevent them
+   from shrinking to fit their full-page image dimensions. */
+
+.project-preview {
+    height: 230px;
+    min-height: 0;
+    padding: 0;
+    overflow: hidden;
+    display: block;
+    background-color: #080d1d;
+}
+
+.project-preview img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+/* Preserve the original DevHub text-based preview layout. */
+.project-preview.devhub-preview {
+    display: flex;
+    padding: 20px;
+}
+
+/* Slightly shorter previews on small screens. */
+@media (max-width: 768px) {
+    .project-preview {
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-preview {
+        height: 200px;
+    }
+}
